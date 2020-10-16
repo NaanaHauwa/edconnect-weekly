@@ -6,56 +6,47 @@
 <body>
     <h1>Project Explorer</h1>
     <p style="font-size: 160%;"><b>One Stop Database For Final Year Projects</b></p>
-    <a href="file://C:/Users/Public/Documents/Project-Explorer/index.html">Home</a>
-    <a href="file://C:/Users/Public/Documents/Project-Explorer/index.html">Projects</a>
-    <a href="file://C:/Users/Public/Documents/Project-Explorer/index.html">Submit</a>
-    <a href="file:///C:/Users/Public/Documents/Project-Explorer/login.html">Login</a>
-    <a href="file:///C:/Users/Public/Documents/Project-Explorer/register.html">Register</a>
+    <a href="file:///C:/Users/user/edconnect-weekly/app/public/project-explorer/index.html">Home
+    <a href="file:///C:/Users/user/edconnect-weekly/app/public/project-explorer/search.html">Projects
+    <a href="file:///C:/Users/user/edconnect-weekly/app/public/project-explorer/createProject.html">Submit
+    <a href="file:///C:/Users/user/edconnect-weekly/app/public/project-explorer/login.html">Login
+    <a href="file:///C:/Users/user/edconnect-weekly/app/public/project-explorer/register.html">Register</a>
     
     <h2 style="font-size: 200%;"><b>Register</h2></b>
     <form action="/action_page.php">
       <p>
-      <strong><label for="fname">First name:</label><br>
-      <input type="text" id="fname" name="fname"><br></p>
+      <strong><label for="firstName">First name:</label><br>
+      <input type="text" id="firstName" name="firstName"><br></p>
       <p>
-      <label for="lname">Last name:</label><br>
-      <input type="text" id="lname" name="lname"><br></p>
+      <label for="lastName">Last name:</label><br>
+      <input type="text" id="lastName" name="lastName"><br></p>
       <p>
       <label for="email">Email Address:</label><br>
       <input type="email" id="email" name="email"><br></p>
-      <p><label for="pwd">Password:</label><br>
-      <input type="password" id="pwd" name="pwd"><br></p>
-    
-      <p><input type="radio" id="male" name="gender" value="male">
-      <label for="male">Male</label></p>
-      <p><input type="radio" id="female" name="gender" value="female">
-      <label for="female">Female</label></p>
-      <p><input type="radio" id="other" name="gender" value="other">
-      <label for="other">Other</label></p>
+      <p><label for="password">Password:</label><br>
+      <input type="password" id="password" name="password"><br></p>
       
        <form action="/action_page.php">
-      <p><label for="Matric">Matric Number:</label><br>
-      <input type="text" id="matric" name="matric" size="5"><br>
+      <p><label for="MatricNumber">Matric Number:</label><br>
+      <input type="text" id="matricNumber" name="matricNumber" size="5"><br>
        </p>
       
       <form action="/action_page.php">
-      <p><label for="course">Program:</label><br>
-      <select id="course" name="course">
-        <option value="CIS">Computer Information Systems</option>
-        <option value="PH">Public Health</option>
-        <option value="CS">Computer Science</option>
-        <option value="CT">Computer Tech</option>
-        <option value="NS">Nursing</option>
+      <p><label for="program">Program:</label><br>
+      <select id="program" name="program">
+        <option value="computer_science">Computer Science</option>
+        <option value="computer_infprmation_systems">Computer Information Systems</option>
+        <option value="computer_technology">Computer Technology</option>
       </select></p>
 
       <form action="/action_page.php">
-     <p> <label for="Grad">Graduation Year:</label><br>
+     <p> <label for="graduationYear">Graduation Year:</label><br>
       <select id="year" Grad="year">
         <option value="2020">2020</option>
         <option value="2019">2019</option>
         <option value="2018">2018</option>
         <option value="2017">2017</option>
-        <option value="2010">2010</option>
+        <option value="2010">2016</option>
         </select></p>
       <input type="submit" value="Submit"></strong>
 </body>
