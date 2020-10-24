@@ -1,0 +1,20 @@
+body
+{
+ text-align: center;
+ color: black;
+ background-color: rgb(247, 240, 176);
+ border: inset;
+ border-color: rgb(128, 10, 96);
+}
+h1
+{
+ border: outset;
+ border-color: brown;
+}
+p
+{
+ text-decoration: none;
+ font-family: "Times New Roman", Times, serif;
+ font-style: oblique;
+ font-size: xx-large;
+}
