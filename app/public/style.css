@@ -1,15 +1,15 @@
 body
 {
  text-align: center;
- color: black;
- background-color: rgb(247, 240, 176);
+ color: rgba(18, 0, 0, 452);
+ background-color: rgb(245, 238, 176);
  border: inset;
- border-color: rgb(128, 10, 96);
+ border-color: Purple;
 }
 h1
 {
- border: outset;
- border-color: brown;
+ border: inset;
+ border-color: rgb(42, 165, 118);
 }
 p
 {
@@ -17,4 +17,5 @@ p
  font-family: "Times New Roman", Times, serif;
  font-style: oblique;
  font-size: xx-large;
+ padding: 10px;
 }
