@@ -1,100 +1,120 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="css/style.css">
+    <title>editproject</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
-<body>
-    <nav class="header-footer">
-        <div class="left-nav">
-           <a href="index.html">Project Explorer</a> 
-             <input type="text" placeholder="Search Projects" id="search_term" class="nav-text" />
-            <button class="nav-text nav-btn">Search</button>
-            <a href="search.html" style="text-decoration: none" class="nav-text nav-text-color">Project</a>
-            <a href="createProject.html" style="text-decoration: none" class="nav-text nav-text-color">Submit</a>
-        </div>
-        <div class="right-nav">
-            <a href="register.html" style="text-decoration: none" class="nav-text nav-text-color">Sign Up</a>
-            <a href="login.html" style="text-decoration: none" class="nav-text nav-text-color">Login</a>
-        </div>
-    </nav>
-
-    <main>
+<body>  
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="btn btn-primary btn-sm" href="index.html">Project Explorer</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <form method="get" action="/projects" class="form-inline">
+            <input type="text" placeholder="Search Projects" name="search" class="mr-sm-2 form-control"/>
+            <input type="hidden" name="type" value="Name" />
+            <button type="submit" class="btn btn-outline-light">Search</button>
+          </form>
+                <div class="collapse navbar-collapse" id="navbars">
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item active">
+                        <a class="btn btn-primary btn-sm" href="search.html">Project <span class="sr-only"></span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="btn btn-primary btn-sm" href="createProject.html">Submit</a>
+                      </li>
+                    </ul>
+            </div>
+            <div class="nav justify-content-end">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                <a class="btn btn-primary btn-sm"  href="register.html">Sign Up</a>
+                </li>
+                <li class="nav-item active">
+                <a class="btn btn-primary btn-sm" href="login.html">Login</a>
+                </li>
+                </ul>>
+            </div>
+        </nav>
+        <main>
+            <section>
+                <div class="container">
+                    <div class="nav justify-content-left">
+                    <h1>Project 4</h1>
+                </div> 
+                <div class="my-3 container">
+                    <h3 class="mt-5" id="project_name"></h3>
+                    <div class="container">
+                      <div class="p-3 mt-3 mb-5 bg-light text-dark row">
+                        <div class="col"><p>Created By<br>Ade Ade</p><br/>
+                          <h6 id="project_author"></h6>
+                        </div>
+                <div class="col">Date Created <br />
+                    <h6>2002-04-09</h6>
+                  </div>
+                  <div class="col">Last Updated <br />
+                    <h6>2020-04-09</h6>
+                  </div>
+                  <div class="d-flex justify-content-end col">
+                    <div>
+                      <a href="editProject.html" class="btn btn-primary">Edit Project</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </section>
         <section>
-            <h2 class="container12">Project 1</h2>
-            <div class="container8">
-                <div class="profile">
-                    <p>Created By<br>Ade Ade</p>
-                </div>
-                <div class="profile">
-                    <p>Date Created<br>2002-09-04</p>
-                </div>
-                <div class="profile">
-                    <p>Last Updated<br>2020-09-04</p>
-                </div>
-
-                <input type="submit" value="View Project" class="button4">
-
-            </div>
-
-        </section>
-
-        <section class="container9">
-
-            <div class="editproject">
-                <h3>Edit Project</h3>
+     <div class="my-5 row">
+            <div class="col">
+                <h5>Edit Project</h5>
                 <hr>
-
-                <form>
-                    <label for="ptitle">Project Name</label><br>
-                    <input type="text" placeholder="Project 4" name="ptitle"><br><br>
-
-                    <label for=abstract>Project Abstract</label><br>
-                    <textarea name="abstract"></textarea><br><br>
-
-                    <label for="author">Author(s)</label><br>
-                    <input type="text" placeholder="Henry James, Bola Ade" name="author"><br><br>
-
-                    <label for="tag">Tag(s)</label><br>
-                    <input type="text" placeholder="#Javasrpit, #Mongodb" name="tag"><br><br>
-
-                    <input type="submit" value="Save" class="button1">
-                </form>
-
-            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-            <div class="editproject">
-                <h3>Manage Project Files</h3>
-                <hr>
-                <input type="file" value="browse">
-                <hr>
-
-                <div class="fileDisplay">
-                    <table>
-                        <tr class="tableRow">
-                            <th>
-                                <h3>Project files</h3>
-                            </th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>No file uploaded yet</p>
-                            </td>
-                        </tr>
-
-                    </table>
-                </div>
-            </div>
-
-        </section>
-
-    </main><br><br>
-
-    <footer>
-        <div class="foot">
-            Project Explorer © 2020<b><sup> .</sup></b><b>Edconnect</b>
-        </div>
-
-    </footer>
+  <form action="/projects/edit" method="post" class="">
+  <div class="form-group"><label class="form-label">Project name</label><input name="ptitle" placeholder="Project 4" type="text" class="form-control" value="">
+    </div>
+  <div class="form-group"><label class="form-label">Project abstract</label><textarea name="abstract" rows="7" required="" class="form-control">Lorem ipsum dolor sit amet, an his etiam torquatos.
+Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. 
+Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. 
+Id qui nemore latine molestiae,ad mutat oblique delicatissimi pro
+Lorem ipsum dolor sit amet, an his etiam torquatos.   
+Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. 
+Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.
+ Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro 
+Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. 
+Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.
+ Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro</textarea>
+</div>
+      <div class="form-group"><label class="form-label">Author(s)</label><input name="authors" placeholder="Enter author names (seperated by comma)" required="" type="text" class="form-control" value="Henry James, Bola Ade"></div>
+            <div class="form-group"><label class="form-label">Tag(s)</label><input name="tags" placeholder="Use # to tag project with different topics (e.g. #javascript #mongodb)" type="text" class="form-control" value="#javascript #mongodb"></div><input type="hidden" name="id value="5f4b7e4501d377002946abf3"><button type="submit" class="btn btn-primary">Save</button>
+         </form>
+       </div>
+                            <div class="col">
+                                <h5>Manage Project files</h5>
+                                <hr>
+                                <div class="custom custom-file"><input multiple="" type="file" class="custom-file-input" name="projectFile"><label
+                                        class="custom-file-label">Click to open file browser</label></div>
+                                <hr>
+                                <div class="mt-3 card">
+                                    <div class="card-header">
+                                        <h5>Project files</h5>
+                                    </div>
+                                    <div class="list-group list-group-flush">
+                                        <div class="d-flex justify-content-center align-items-center list-group-item">
+                                            <p class="lead">No file uploaded yet</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    </main>
+    <div class="container">
+        <nav class="navbar navbar-expand navbar-light bg-light">
+          <div class="justify-content-end navbar-collapse collapse">
+            <span class="navbar-text">Project Explorer © 2020<b><sup> .</sup></b><b>Edconnect</a></span>
+          </div>
+        </nav>
+      </div>
+    </div>
 </body>
 
 </html>

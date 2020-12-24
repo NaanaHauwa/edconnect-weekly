@@ -2,125 +2,153 @@
 <html>
 <head>
     <title>Profile</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
-
-<body>
-
-    <nav class="header-footer">
-        <div class="left-nav">
-           <a href="index.html">Project Explorer</a> 
-             <input type="text" placeholder="Search Projects" id="search_term" class="nav-text" />
-            <button class="nav-text nav-btn">Search</button>
-            <a href="search.html" style="text-decoration: none" class="nav-text nav-text-color">Project</a>
-            <a href="createProject.html" style="text-decoration: none" class="nav-text nav-text-color">Submit</a>
-        </div>
-
-        <div class="right-nav">
-            <a href="register.html" style="text-decoration: none" class="nav-text nav-text-color">Sign Up</a>
-            <a href="login.html" style="text-decoration: none" class="nav-text nav-text-color">Login</a>
-        </div>
-    </nav>
-
+<body>  
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="btn btn-primary btn-sm" href="index.html">Project Explorer</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <form method="get" action="/projects" class="form-inline">
+            <input type="text" placeholder="Search Projects" name="search" class="mr-sm-2 form-control"/>
+            <input type="hidden" name="type" value="Name" />
+            <button type="submit" class="btn btn-outline-light">Search</button>
+          </form>
+                <div class="collapse navbar-collapse" id="navbars">
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item active">
+                        <a class="btn btn-primary btn-sm" href="search.html">Project <span class="sr-only"></span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="btn btn-primary btn-sm" href="createProject.html">Submit</a>
+                      </li>
+                    </ul>
+            </div>
+<div class="nav justify-content-end">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                <a class="btn btn-primary btn-sm"  href="register.html">Sign Up</a>
+                </li>
+                <li class="nav-item active">
+                <a class="btn btn-primary btn-sm" href="login.html">Login</a>
+                </li>
+                </ul>>
+            </div>
+        </nav>
     <main>
+            <section>
+                <div class="jumbotron">
+                    <p><b>Ade Ade</b>@edconnect.ng</p>
+                </div> 
+            </section>
+            <section>
+                <div class="jumbotron">
+                <div class="form-row">
+                    <div class="col-auto my-2">
+                        <label for="text">Program</label><br>
+                        <label for="text">Computer Science</label><br>
+                    </div>
+                    <div class="col-auto my-2">
+                        <label for="text">Matriculation</label><br>
+                        <label for="text">0000-00-00</label><br>
+                    </div>
+                    <div class="col-auto my-2">
+                        <label for="text">Graduation Year</label><br>
+                        <label for="text">2019</label><br>
+                    </div>
+</div>
+</div>
+</section>
         <section>
-            <div class="container71">
-                <b>User Name</b>@edconnect.ng
-            </div>
-            
-            <div class="container7">
-                <div class="profile">
-                    <p>Program<br>Computer Science</p>
-                </div>
-                <div class="profile">
-                    <p>Matriculation<br>00/0000</p>
-                </div>
-                <div class="profile">
-                    <p>Graduation Year<br>2019</p>
-                </div>
-
+            <div class="jumbotron">
+                <div class="justify-content-center">
+                <h1>Update Profile</h1>
             </div>
 
-        </section>
-
-        <section>
-            <div class="container10">
-                <h3>Update Profile</h3>
-                <hr>
-            </div>
-
-            <form class="container3">
-                <div class="container4">
-                    <label for="fname">First Name:</label><br>
-                    <input type="text" placeholder="Ade Ade" name="fname"><br><br>
-
-                    <label for="email">Email Address:</label><br>
-                    <input type="email" placeholder="test@edconnect.ng" name="email"><br><br>
-
-                    <label for="mnum">Matric Number:</label><br>
-                    <input type="text" placeholder="00/0000" name="mnum"><br><br>
-
-                    <input type="submit" value="Update Profile" class="button1">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label for="fname">First Name</label>
+                  <input type="text" class="form-control" placeholder="Ade Ade" id="first name">
                 </div>
+                <div class="form-group col-md-4">
+                  <label for="lname">Last Name</label>
+                  <input type="text" class="form-control" placeholder="Ade" id="last name">
+                </div>
+              </div>
 
-                <div class="container4">
-                    <label for="lname">Last Name:</label><br>
-                    <input type="text" placeholder="tatum" name="lname"><br><br>
-
-                    <label for="Program">Program:</label><br>
-
-                    <select name="Program">
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label for="inputEmail">Email Address:</label>
+                  <input type="email" class="form-control" placeholder="test@edconnect.ng" id="inputEmail">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="Program">Program</label><br>
+                    <select id="text" placeholder="Computer Science" class="form-control">
+                        <option selected> Choose...</option>
                         <option value="CS">Computer Science</option>
                         <option value="CT">Computer Tech.</option>
-                        <option value="CIS" selected="">Computer Information Systems</option>
-                        <option value="SOFT">Software Engineering</option>
-                    </select><br><br>
-
-                    <label for="Year">Graduation Year:</label><br>
-
-                    <select name="Year">
-                        <option value="yr1">2020</option>
-                        <option value="yr2">2019</option>
-                        <option value="yr3" selected="">2018</option>
-                        <option value="yr4">2017</option>
-                        <option value="yr5">2016</option>
-                    </select><br><br>
+                        <option value="CIS">Computer Information Sys.</option>
+                        <option value="SOFT">Software Enginering</option>
+                    </select>
                 </div>
+                </div>
+                <div class="form-row">
+                <div class="form-group col-md-2">
+                    <label for="mnum">Matriculation Number</label><br>
+                    <input type="text" class="form-control" placeholder=" e.g. 00/0000" id="mnum"><br><br>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="Year">Year Of Graduation</label><br>
+                    <select id="Year" class="form-control">
+                        <option selected> Choose...</option>
+                        <option value="yr1">2016</option>
+                        <option value="yr2">2017</option>
+                        <option value="yr3">2018</option>
+                        <option value="yr4">2019 "selected"</option>
+                        <option value="yr4">2020</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-2">
+            <button class="btn btn-primary btn-block" type="submit">Update Profile</button>
+            </div>
             </form>
         </section>
-<section>
-<div class="container10">
-<h3>Change Password</h3>
-<hr>
-</div>
-
-            <form class="container31">
-                <div class="container4">
+        <section>
+            <div class="jumbotron">
+                <div class="justify-content-center">
+                <h1>Change Password</h1>
+            </div> 
+        <div class="form-row">
+            <div class="form-group col-md-4">
                     <label for="cpword">Current Password</label><br>
                     <input type="password" placeholder="Current Password" name="cpword"><br><br>
-                    <input type="submit" value="Change Password" class="button1">
                 </div>
-                <div class="container4">
+                <div class="form-group col-md-4">
                     <label for="npword">New Password</label><br>
                     <input type="password" placeholder="Your new password" name="npword"><br><br>
                 </div>
-                <div class="container4">
+                <div class="form-group col-md-4">
                     <label for="ccpword">Confirm Password</label><br>
                     <input type="password" placeholder="Confirm new password" name="ccpword"><br><br>
                 </div>
-
             </form>
-
         </section>
-
+    <div class="form-group row">
+        <div class="col-sm-2">
+    <button class="btn btn-primary btn-block" type="submit">Change Password</button>
+  </form>
     </main>
-
-    <footer>
-        <div class="foot">
-            Project Explorer © 2020<b><sup> .</sup></b><b>Edconnect</b>
-        </div>
-
-    </footer>
+    <div class="container">
+        <nav class="navbar navbar-expand navbar-light bg-light">
+          <div class="justify-content-end navbar-collapse collapse">
+            <span class="navbar-text">Project Explorer © 2020<b><sup> .</sup></b><b>Edconnect</a></span>
+          </div>
+        </nav>
+      </div>
+    </div>
 </body>
 
 </html>
